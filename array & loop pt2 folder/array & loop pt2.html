@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var array = [5, 2, 10, 0, 50, 1900, 25, 25];
+		var sum = 0;
+
+		//Use a loop to iterate through the elements in the array
+		//find the sum of all elements in the array
+		for (var i = 0; i < array.length; i++ ){
+	   	 	sum += parseInt(array[i], 10 ); 
+	   	 	document.write("array[" + i + "] = " + array[i] + ", sum = " + sum + "<br>");		
+		} 
+		document.write("<br>" + "The sum of all elements in the array = " + sum);
+	</script>
+</body>
+</html>
