@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id = "name"></h1>
+	<script type="text/javascript">
+		//Get access to element with id "name"
+		//Set text to whatever name the user types in the prompt
+		var input = document.getElementById("name").innerHTML = prompt("Enter name: ");
+		//Format the first character of name to upper case, write output
+		document.write("Hello my name is " + input.charAt(0).toUpperCase() + input.substr(1));
+	</script>
+</body>
+</html>
