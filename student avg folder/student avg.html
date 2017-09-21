@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var grade = [80, 77, 88, 95, 68];
+		var sum = grade[0] + grade[1] + grade[2] + grade[3] + grade[4];
+
+		//Find the student's average
+		var avg = sum/grade.length;
+
+		//Find the student's letter grade using if statement
+		//Letter grade: F is below 60, D is up to 70, C is up to 79, B is up to 89, A is up to 100
+		//Console.log the result
+		if (avg >= 90) {		
+			console.log('Sum = ' + sum + "   Average = " + avg + "   Letter grade = A");
+		}	else if (avg >= 80) {
+				console.log('Sum = ' + sum + "   Average = " + avg + "   Letter grade = B");
+			}	else if (avg >= 71) {
+					console.log('Sum = ' + sum + "  Average = " + avg + "  Letter grade = C");
+				}	else if (avg >= 60) {
+						console.log('Sum = ' + sum + "  Average = " + avg + "  Letter grade = D");
+					}	else {
+							console.log('Sum = ' + sum + "  Average = " + avg +"  Letter grade = F"); 
+						}
+	</script>
+</body>
+</html>
