@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fruits</title>
+</head>
+<body>
+	<h1 id = "display"></h1> 
+	<script type = "text/javascript">
+	    var fruits = ["apple", "orange", "kiwi"]
+	    //set text to whatever user types in the prompt
+		var input = prompt("Enter more fruits");
+	    //Set text to lower case for proper sorting and add an element to the end of array
+	    fruits.push(input.toLowerCase());
+	    //Sort elements in ascending order
+	    fruits.sort();
+	    //Display elements separated by " with "
+	    document.getElementById("display").innerHTML = fruits.join(" with ");
+	</script>
+</body>
+</html>
