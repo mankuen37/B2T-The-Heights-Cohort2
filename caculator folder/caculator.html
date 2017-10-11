@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<!-- Position the calculator in the center of web page --> 
+    <center><br> 
+    <!-- Create a backgoound image on web page --> 
+    <style>
+   		body{
+   			background: url("https://cdn.pixabay.com/photo/2017/08/02/01/18/lifestyle-2569453_960_720.jpg");
+			background-size: cover;
+			background-position: 70% 30%
+		}
+	</style>
+	<br><br><br><br><br><br>
+	<!-- Set width, background color, border radius and padding for calculator -->
+	<div style = "width: 261px; background-color: #004A00; border-radius: 12px; padding: 10px 10px 10px 10px"> 
+
+		<form name ="calc">
+			<!-- Set placeholder to display input and also return a result after calculation -->     		
+			<input name = "display" placeholder="0" style="width:250px; height:60px; text-align:right; font-size:40px; border-radius: 8px; margin:3px">
+			<br>
+			<!-- Create 1st row of buttons for user to click on as input 
+				 Call function "plusbtn" for addition -->
+			<input type="button" value="7" onclick="document.calc.display.value +='7'" style="width:60px; height:60px; font-size:30px; border-radius:8px; margin:3px">
+			<input type="button" value="8" onclick="document.calc.display.value +='8'" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="9" onclick="document.calc.display.value +='9'" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="+" onclick="plusbtn()" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<br>
+			<!-- Create 2nd row of buttons for user to click on as input 
+			     Call function "minusbtn" for subtraction -->
+			<input type="button" value="4" onclick="document.calc.display.value +='4'" style="width:60px; height:60px; font-size:30px; border-radius:8px; margin:3px">
+			<input type="button" value="5" onclick="document.calc.display.value +='5'" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="6" onclick="document.calc.display.value +='6'" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="-" onclick="minusbtn()" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<br>
+			<!-- Create 3rd row of buttons for user to click on as input 
+			     Call function "multbtn" for multipication -->
+			<input type="button" value="1" onclick="document.calc.display.value +='1'" style="width:60px; height:60px; font-size:30px; border-radius:8px; margin:3px">
+			<input type="button" value="2" onclick="document.calc.display.value +='2'" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="3" onclick="document.calc.display.value +='3'" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="x" onclick="multbtn()" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<br>
+			<!-- Create 4th row of buttons for user to click on as input 
+			     Call function "modbtn" for modulus, "decbtn" for decimal point, "divbtn" for division -->
+			<input type="button" value="0" onclick="document.calc.display.value +='0'" style="width:60px; height:60px; font-size:30px; border-radius:8px; margin:3px">
+			<input type="button" value="%" onclick="modbtn()" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="." onclick="decbtn()" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<input type="button" value="/" onclick="divbtn()" style="width:60px; height:60px; font-size:30px; border-radius:8px">
+			<br>
+			<!-- 
+			Create 5th row of buttons for user to click on
+		    The "=" button invokes the "eval" function to perform the calucation of the expression
+			The "C" button clears the input/result in the placeholder, call function "clearbtn"
+			-->
+			<input type="button" value="=" onclick="document.calc.display.value = eval(document.calc.display.value)" style="width:124px; height:60px; font-size:30px; border-radius:8px; margin:3px">
+			<input type="button" value="C" onclick="clearbtn()" style="width:124px; height:60px; font-size:30px; border-radius:8px">
+		</form>
+	</div>
+	<script type="text/javascript">
+//		Functions display operators and text in placeholder 
+		function plusbtn(){
+			document.calc.display.value += "+";
+			document.calc.display.style.textAlign="right";
+		}
+		function minusbtn(){
+			document.calc.display.value += "-";
+			document.calc.display.style.textAlign="right";
+		}
+		function multbtn(){
+			document.calc.display.value += "*";
+			document.calc.display.style.textAlign="right";
+		}
+		function modbtn(){
+			document.calc.display.value += "%";
+			document.calc.display.style.textAlign="right";
+		}
+		function decbtn(){
+			document.calc.display.value += ".";
+			document.calc.display.style.textAlign="right";
+		}
+		function divbtn(){
+			document.calc.display.value += "/";
+			document.calc.display.style.textAlign="right";
+		}
+		function clearbtn(){
+			document.calc.display.value = " ";
+			document.calc.display.style.textAlign="right";
+		}
+	</script>
+</body>
+</html>
+
